@@ -1,18 +1,27 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
 import HomeScreen from './app';
 
 const App: React.FC = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <HomeScreen />
-    </SafeAreaView>
+    <SafeAreaProvider>
+      {/* Expo StatusBar를 사용하여 설정 */}
+      <StatusBar style="light" backgroundColor="#000" />
+
+      {/* SafeAreaView 배경을 검은색으로 설정 */}
+      <SafeAreaView style={styles.safeArea}>
+        <HomeScreen />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
+    backgroundColor: '#000', // SafeAreaView 배경색을 검은색으로 설정
   },
 });
 

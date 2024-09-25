@@ -5,7 +5,7 @@ const HeaderLogo: React.FC = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/images/green_link_logo.png')}
+        source={require('../assets/images/logo_end.png')}
         style={styles.logo}
         resizeMode="contain"
       />
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     // height: 80,
-    backgroundColor: 'gray',
+    backgroundColor: '#252525',
     alignItems: 'center',
     justifyContent: 'center',
   },

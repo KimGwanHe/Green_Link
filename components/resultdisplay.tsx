@@ -9,7 +9,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.result}>
-        {result ? `Result: ${result}` : 'URL을 확인해주세요.'}
+        {result ? `Result: ${result}` : ''}
       </Text>
     </View>
   );
@@ -17,7 +17,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result }) => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 10,
     alignItems: 'center',
   },
   result: {

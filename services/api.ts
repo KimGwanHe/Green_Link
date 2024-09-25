@@ -4,9 +4,11 @@ export const checkUrlSafety = async (url: string): Promise<string> => {
     return new Promise((resolve) => {
       setTimeout(() => {
         if (url.includes('phishing')) {
-          resolve('Malicious URL');
+          resolve('위험!! 다시 확인하세요!');
+        } else if (url === '' || url.includes('unknown')) { // 알수없음 상태를 추가하는 조건
+          resolve('알수없는 URL 입니다!');
         } else {
-          resolve('Safe URL');
+          resolve('안전한 URL 입니다!');
         }
       }, 1000);
     });

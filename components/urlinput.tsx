@@ -33,7 +33,7 @@ const UrlInput: React.FC<UrlInputProps> = ({ onSubmit }) => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 0,
   },
   input: {
     height: 40,
